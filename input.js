@@ -20,19 +20,22 @@ const setupInput = function(conn) {
       connection.write('Move: up');;
     }
   });
+
   stdin.on('data', (key) => {
     if (key === 'a'){
       connection.write('Move: left');;
     }
   });
+
   stdin.on('data', (key) => {
     if (key === 's'){
-      connection.write('Move: right');;
+      connection.write('Move: down');;
     }
   });
+
   stdin.on('data', (key) => {
     if (key === 'd'){
-      connection.write('Move: down');;
+      connection.write('Move: right');;
     }
   });
 
